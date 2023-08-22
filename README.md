@@ -24,8 +24,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## Tools used
 
-Reduxtoolkit for state management
-react-icons for icon
-uuid for list unique id
-framer motion for animation
-react-hot-toast for message display
+1.  Redux-toolskit for state management
+2.  react-icons for icon
+3.  uuid for list unique id
+4.  framer motion for animation
+5.  react-hot-toast for message display
