@@ -5,7 +5,6 @@ import React, { useEffect, useState } from 'react';
 import { MdDelete, MdEdit } from 'react-icons/md';
 import { useDispatch } from 'react-redux';
 import { deleteTodo, updateTodo } from '../slices/todoSlice';
-import { getClasses } from '../utils/getClasses';
 import CheckButton from './CheckButton';
 import TodoModal from './TodoModal';
 

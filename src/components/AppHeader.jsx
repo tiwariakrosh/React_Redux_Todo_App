@@ -17,7 +17,7 @@ function AppHeader() {
 
   return (
     <div className={'appHeader'}>
-      <Button variant="primary" onClick={() => setModalOpen(true)}>
+      <Button bg="primary" onClick={() => setModalOpen(true)}>
         Add Task
       </Button>
       <SelectButton id="status" onChange={(e) => updateFilter(e)} value={filterStatus}>

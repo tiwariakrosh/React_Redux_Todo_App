@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap');
 *,
 *::after,
 *::before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Poppins', sans-serif;
 }
 :root {
-  --primaryPurple: #646ff0;
+  --primaryPurple: #143a46;
   --black-1: #646681;
   --black-2: #585858;
   --bg-1: #f8f8ff;
@@ -21,18 +23,30 @@ html {
   font-size: 10px;
 }
 body {
-  font-family: 'Poppins', sans-serif;
   width: 100%;
   min-height: 100vh;
   background-color: var(--bg-1);
 }
-* {
-  font-family: 'Poppins', sans-serif;
+
+@mixin smallDeviceSize {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
 }
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
+
+#root {
+  height: 100vh;
+  width: 100%;
+  background: url(../assets/bg_img.jpg) no-repeat center center/cover;
+  background-position: fixed;
+  position: relative;
+}
+#root::before {
+  content: '';
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  background-color: #272727da;
 }
 
 // App module CSS
@@ -82,22 +96,21 @@ body {
   text-transform: capitalize;
   cursor: pointer;
   overflow: hidden;
+
   &__select {
     color: var(--black-2);
-    font-family: Poppins;
     padding: 1rem;
     border: none;
     background-color: var(--bg-3);
-
     width: 150px;
     cursor: pointer;
   }
 }
-.button--primary {
+.primary {
   background-color: var(--primaryPurple);
   color: var(--white);
 }
-.button--secondary {
+.secondary {
   background-color: var(--bg-3);
   color: var(--black-1);
 }
@@ -117,12 +130,13 @@ body {
 }
 .container {
   background-color: var(--bg-2);
-  max-width: 500px;
+  max-width: 600px;
   width: 90%;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   padding: 2rem;
   border-radius: 8px;
   position: relative;
@@ -184,7 +198,6 @@ body {
 .title {
   display: inline-block;
   width: 100%;
-  font-family: 'Poppins';
   font-size: 4rem;
   font-weight: 700;
   text-transform: uppercase;
